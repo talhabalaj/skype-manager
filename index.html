@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="node_modules/tuicss/dist/tuicss.min.css" />
+    <style>
+      body {
+        font-family: DOS;
+      }
+      .titlebar {
+        height: 30px;
+        background: #329ea3;
+        user-select: none;
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .titlebar-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+      }
+      .titlebar-button:hover {
+        background: #5bbec3;
+      }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/src/assets/logo.svg" />
+  </head>
+
+  <div data-tauri-drag-region class="titlebar">
+    <div class="titlebar-button" id="titlebar-minimize">
+      <img
+        src="https://api.iconify.design/mdi:window-minimize.svg"
+        alt="minimize"
+      />
+    </div>
+    <div class="titlebar-button" id="titlebar-maximize">
+      <img
+        src="https://api.iconify.design/mdi:window-maximize.svg"
+        alt="maximize"
+      />
+    </div>
+    <div class="titlebar-button" id="titlebar-close">
+      <img src="https://api.iconify.design/mdi:close.svg" alt="close" />
+    </div>
+  </div>
+  <body style="margin-top: 30px" class="white-text tui-bg-blue-black">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="/src/index.tsx" type="module"></script>
+    <script src="node_modules/tuicss/dist/tuicss.min.js"></script>
+  </body>
+</html>
